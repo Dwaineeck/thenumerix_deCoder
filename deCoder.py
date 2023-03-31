@@ -1,14 +1,24 @@
 import random
+# import numpy as np
+# import cv2
 
+#create image replacement items
+# width, height = 800px, 800px
+# img1 = np.zeros(height, width)
+# img2 = np.zeros(height, width)
+# img3 = np.zeros(height, width)
+# img4 = np.zeros(height, width)
+# cv2.imwrite("img1.png")
 #Function generates list of random numbers
 def secret_list(max_range):
     secret_list = []
     for i in range(4):
+
         secret_list.append(random.randint(1,max_range))
     return secret_list
 
 deCoder_list = secret_list(5)
-print(deCoder_list)
+# print(deCoder_list)
 
 #deCoder Game
 print("Welcome deCoder!")
@@ -32,7 +42,7 @@ while correct <  4:
     if guess4 == deCoder_list[3]:
         correct += 1
     if correct < 4:
-        print("You guessed " + str(correct) + " number(s) correctly. \n")
+        print("You guessed " + str(correct) + " numbers correctly. \n")
         correct = 0
         continue
     else:
